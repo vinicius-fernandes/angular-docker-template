@@ -12,6 +12,6 @@ RUN npm run build --prod
 #Configuring nginx
 FROM nginx:latest AS ngi
 #Compiled code from previuos stage
-COPY --from=build /dist/src/app/dist/app-vestibulando /usr/share/nginx/html
+COPY --from=build /dist/src/app/dist/mogenius /usr/share/nginx/html
 COPY /nginx.conf  /etc/nginx/conf.d/default.conf
 EXPOSE 80
